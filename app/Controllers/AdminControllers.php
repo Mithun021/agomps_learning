@@ -24,6 +24,7 @@
                     if (password_verify($userPassword, $data['password'])) {
                         $this->session->set('loggedUserData',$session_data);
                         $this->session->set('adminLoginned',"adminLoginned");
+                        session()->close();
                         echo "dataMatch";
                     } else {
                     echo 'User ID or Password Mismatch';
