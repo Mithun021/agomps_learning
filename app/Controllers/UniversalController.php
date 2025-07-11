@@ -72,8 +72,8 @@ public function testSession() {
     ];
     $this->session->set('loggedUserData',$session_data);
     $this->session->set('adminLoginned',"adminLoginned");
-    // session()->close();
-    echo "dataMatch";
+
+    echo $this->session->get('loggedUserData');
     
 }
 
