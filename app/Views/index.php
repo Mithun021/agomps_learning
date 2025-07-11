@@ -2,6 +2,7 @@
 <?= $this->section('body-content') ?>
 <?= view('layouts/banner-slider') ?>
 <div class="container-fluid">
+    <?php dd(session()->get()); ?>
     <?= ""//view('layouts/tournament-category') ?>
     <?= ""//view('layouts/tournaments') ?>
 </div>
