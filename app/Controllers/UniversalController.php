@@ -66,8 +66,15 @@ class UniversalController extends BaseController{
 
 
 public function testSession() {
-    session()->set('demo', 'ItWorks');
-    echo session()->get('demo'); // Expect: ItWorks
+    $session_data = [
+        'loggeduserFirstName' => "Mithun",
+        'loggeduserId' => 1
+    ];
+    $this->session->set('loggedUserData',$session_data);
+    $this->session->set('adminLoginned',"adminLoginned");
+    // session()->close();
+    echo "dataMatch";
+    
 }
 
 
