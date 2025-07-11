@@ -2,8 +2,8 @@
 <?= $this->section('body-content') ?>
 <?= view('layouts/banner-slider') ?>
 <div class="container-fluid">
-    <?= view('layouts/tournament-category') ?>
-    <?= view('layouts/tournaments') ?>
+    <?= ""//view('layouts/tournament-category') ?>
+    <?= ""//view('layouts/tournaments') ?>
 </div>
 <section class="bg-primary py-3 mb-3">
     <div class="container-fluid">
