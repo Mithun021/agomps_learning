@@ -3,6 +3,7 @@
     use App\Models\UserModel;
     class AdminControllers extends BaseController{
         public function adminLogin(){
+            $session = \Config\Services::session();
             $admin_model = new UserModel();
             if ($this->request->is("get")) {
                 if (isset($_SESSION['adminLoginned'])) {
@@ -22,9 +23,9 @@
                         'loggeduserId' => $data['userId']
                     ];
                     if (password_verify($userPassword, $data['password'])) {
-                        $this->session->set('loggedUserData',$session_data);
-                        $this->session->set('adminLoginned',"adminLoginned");
-                        session()->close();
+                        $session->set('loggedUserData',$session_data);
+                        $session->set('adminLoginned',"adminLoginned");
+                        // session()->close();
                         echo "dataMatch";
                     } else {
                     echo 'User ID or Password Mismatch';
