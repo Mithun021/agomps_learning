@@ -75,7 +75,7 @@ public function testSession() {
 
     echo "<pre>";
     print_r($session->get()); // Get all session data
-    echo "</pre>"
+    echo "</pre>";
     
 }
 
