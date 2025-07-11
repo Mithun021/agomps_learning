@@ -11,7 +11,8 @@ class IsAdminFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         $session = session();
-        if (!session()->get('adminLoginned')) {
+        log_message('debug', 'Session in Filter: ' . print_r($session->get(), true));
+        if (!$session->get('adminLoginned')) {
             return redirect()->to(base_url('admin/login'))->with('fail', 'You must be logged in');
         }
     }
