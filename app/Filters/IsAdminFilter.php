@@ -12,7 +12,7 @@ class IsAdminFilter implements FilterInterface
     {
         $session = session();
         if (!session()->get('adminLoginned')) {
-            return redirect()->to(base_url('login'))->with('fail', 'You must be logged in');
+            return redirect()->to(base_url('admin/login'))->with('fail', 'You must be logged in');
         }
     }
 
