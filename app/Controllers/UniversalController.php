@@ -64,4 +64,11 @@ class UniversalController extends BaseController{
         }
 }
 
+
+public function testSession() {
+    session()->set('demo', 'ItWorks');
+    echo session()->get('demo'); // Expect: ItWorks
+}
+
+
 }
