@@ -73,7 +73,9 @@ public function testSession() {
     $this->session->set('loggedUserData',$session_data);
     $this->session->set('adminLoginned',"adminLoginned");
 
-    echo $this->session->get('loggedUserData');
+    echo "<pre>";
+    print_r($session->get()); // Get all session data
+    echo "</pre>"
     
 }
 
