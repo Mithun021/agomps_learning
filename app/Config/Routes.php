@@ -31,7 +31,7 @@ $routes->get('payment_success_page/(:num)', 'Enroll_tournamentController::paymen
 
 $routes->get('investment', 'InvestmentController::investment');
 
-
+$routes->get('admin/', 'AdminControllers::adminDashboard');
 $routes->match(['get', 'post'], 'admin/login', 'AdminControllers::adminLogin');
 $routes->group('admin', ['filter' => 'adminLogin'], static function ($routes) {
     $routes->get('/', 'AdminControllers::adminDashboard');
